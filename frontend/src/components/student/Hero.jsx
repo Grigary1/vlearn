@@ -1,5 +1,7 @@
 import React from 'react'
 import { assets } from '../../assets/assets'
+import SearchBar from './SearchBar';
+import Companies from './Companies';
 
 const Hero = () => {
   return (
@@ -17,6 +19,8 @@ const Hero = () => {
       <p className="md:hidden text-gray-500 max-w-sm mx-auto">
         It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
       </p>
+      <SearchBar/>
+      
     </div>
   );
 };

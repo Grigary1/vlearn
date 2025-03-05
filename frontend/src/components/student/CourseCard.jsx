@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { assets } from '../../assets/assets'
+import { AppContext } from '../../context/AppContext'
 
 const CourseCard = ({ course }) => {
+  const {currency}=useContext(AppContext)
   return (
-    <div>
+    <Link to={'/course/'+course._id} onClick={()=>scrollTo(0,0)}
+    className="border border-gray-500/30 pb-6 overflow-hidden rounded-lg"
+    >
       <img src={course.courseThumbnail} alt="" />
       <div>
         <h3>{course.courseTitle}</h3>
@@ -17,9 +21,9 @@ const CourseCard = ({ course }) => {
           </div>
           <p>22</p>
         </div>
-        <p>{(course.coursePrice - course.discount * course.coursePrice / 100).toFixed(2)}</p>
+        <p>{currency}{(course.coursePrice - course.discount * course.coursePrice / 100).toFixed(2)}</p>
       </div>
-    </div>
+    </Link>
   )
 }
 

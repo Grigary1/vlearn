@@ -14,7 +14,7 @@ const CourseSection = () => {
         The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed
         to using 'Content here, content here', making it look like readable English</p>
       
-      <div>
+      <div className='grid md:grid-cols-2 lg:grid-cols-4 px-4 md:px-0 mx:my-16 my-10 gap-4'>
         {allCourses.slice(0,4).map((course,index)=>(
           <CourseCard key={index} course={course}/>
         ))}

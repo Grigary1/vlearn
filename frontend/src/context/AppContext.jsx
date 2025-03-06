@@ -11,7 +11,7 @@ export const AppContextProvider = (props) => {
 
     const [allCourses,setAllCourses]=useState([]);
     const [isEducator,setIsEducator]=useState(true);
-
+console.log("All ",allCourses)
     const navigate=useNavigate();
     //get all courses
     const fetchAllCourses=async()=>{

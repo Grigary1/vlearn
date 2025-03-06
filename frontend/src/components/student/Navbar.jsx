@@ -9,7 +9,7 @@ const Navbar = () => {
 
 
   const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  let [lastScrollY, setLastScrollY] = useState(0);
 
   const { openSignIn } = useClerk();
   const { user } = useUser();
